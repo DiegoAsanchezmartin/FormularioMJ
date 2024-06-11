@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <form @submit.prevent="submitForm">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="formData.name">
-      </div>
+    <div class="card">
+      <form @submit.prevent="submitForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" v-model="formData.name">
+        </div>
 
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="formData.email">
-      </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" v-model="formData.email">
+        </div>
 
-      <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" v-model="formData.phone">
-      </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" v-model="formData.phone">
+        </div>
 
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" v-model="formData.message" rows="6"></textarea>
-      </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" v-model="formData.message" rows="6"></textarea>
+        </div>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -53,9 +55,18 @@ export default {
 
 <style>
 #app {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
 }
 
 .form-group {
